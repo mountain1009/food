@@ -9,7 +9,7 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
-    "vercel-build": "yarn global add node-gyp"
+    "vercel-build": "npm install -g node-gyp"
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.27.0",
