@@ -38,6 +38,7 @@ const config: NuxtConfig = {
     '@nuxtjs/tailwindcss',
     'nuxt-vite',
     '@nuxtjs/composition-api/module',
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -1,21 +1,32 @@
 <template>
   <div>
-    <p>{{data}}</p>
+    <div v-for='(food, i) in state.foods' :key='i'>
+      <nuxt-link :to='`/foods/${food.id}`' class='text-blue-800 hover:underline'>{{food.name}}</nuxt-link>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import {  defineComponent,useContext ,ref, useFetch } from '@nuxtjs/composition-api'
+import {  defineComponent,useContext ,reactive, useFetch } from '@nuxtjs/composition-api'
+
+export interface FoodType{
+  name: string
+  content: string
+  id: number
+}
 
 export default defineComponent({
   setup() {
-    const data = ref({})
+    const state = reactive({
+      foods: []
+    })
     const {$supabase} = useContext()
     useFetch(async ()=>{
-      const result = await $supabase.from("foods").select("*")
-      data.value = result
+      const { data } = await $supabase.from("foods").select("*")
+      console.log(data)
+      state.foods = data
     })
-    return { data}
+    return { state }
   },
 })
 </script>
