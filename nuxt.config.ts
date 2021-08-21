@@ -1,7 +1,8 @@
+import { NuxtConfig } from '@nuxt/types'
 require('dotenv').config()
 const { SUPABASE_URL, SUPABASE_KEY } = process.env
 
-export default {
+const config: NuxtConfig = {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'server',
 
@@ -53,3 +54,5 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
+
+export default config
