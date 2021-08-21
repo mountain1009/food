@@ -1,5 +1,7 @@
 <template>
-  <p>{{data}}</p>
+  <div>
+    <p>{{data}}</p>
+  </div>
 </template>
 
 <script lang="ts">
