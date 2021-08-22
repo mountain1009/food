@@ -13,8 +13,7 @@ import Header from '~/components/Header.vue'
 
 export default defineComponent({
   components:{Header},
-  setup() {
-  },
+  setup() {},
 })
 </script>
 
