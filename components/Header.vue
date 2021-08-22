@@ -4,8 +4,10 @@
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <nuxt-link to='/'>
           <p class='text-xl font-bold text-white'>
-          <span class="w-10 h-10 text-white p-2 bg-white rounded-full text-yellow-600">食</span>
-            日記
+          <span class="w-10 h-10 text-white p-2 bg-white rounded-full text-yellow-600 mx-1">勤</span>
+          <span class="w-10 h-10 text-white p-2 bg-white rounded-full text-yellow-600 mx-1">怠</span>
+          <span class="w-10 h-10 text-white p-2 bg-white rounded-full text-yellow-600 mx-1">管</span>
+          <span class="w-10 h-10 text-white p-2 bg-white rounded-full text-yellow-600 mx-1">理</span>
           </p>
         </nuxt-link>
       </a>

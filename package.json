@@ -1,5 +1,5 @@
 {
-  "name": "food",
+  "name": "attendance",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js",
-    "vercel-build": "npm install -g node-gyp"
+    "lint": "yarn lint:js"
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.27.0",

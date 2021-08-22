@@ -4,11 +4,11 @@ const { SUPABASE_URL, SUPABASE_KEY } = process.env
 
 const config: NuxtConfig = {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
+  target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'ramen',
+    title: '勤怠管理',
     htmlAttrs: {
       lang: 'ja',
     },
@@ -36,7 +36,7 @@ const config: NuxtConfig = {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    // 'nuxt-vite',
+    'nuxt-vite',
     '@nuxtjs/composition-api/module',
   ],
 
@@ -50,9 +50,9 @@ const config: NuxtConfig = {
       },
     ],
   ],
-  // vite: {
-  //   ssr: true,
-  // },
+  vite: {
+    ssr: false,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
