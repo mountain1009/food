@@ -12,18 +12,23 @@
         </nuxt-link>
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <nuxt-link to="/hoge" class="mr-5 hover:text-gray-900 text-white">hoge</nuxt-link>
-        <nuxt-link to="/foo" class="mr-5 hover:text-gray-900 text-white">foo</nuxt-link>
-        <nuxt-link to="/bar" class="mr-5 hover:text-gray-900 text-white">bar</nuxt-link>
+        <button @click='functions.login(true)' class="mr-5 hover:text-gray-900 text-white">ログイン</button>
       </nav>
     </div>
   </header>
 </template>
 <script lang="ts">
-import {  defineComponent } from '@nuxtjs/composition-api'
+import {  defineComponent,reactive } from '@nuxtjs/composition-api'
+import { authModal } from '~/utils/store-accessor'
 
 export default defineComponent({
   setup() {
+    const functions = reactive({
+      login(data: boolean){
+        authModal.SET_DATA(data)
+      }
+    })
+    return {functions}
   },
 })
 </script>
