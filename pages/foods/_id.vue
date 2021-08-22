@@ -1,7 +1,6 @@
 <template>
   <div>
-    <p v-if='state.isLoading'>Loading.....</p>
-    <p v-else>{{state.food}}</p>
+    <p>{{state.food}}</p>
   </div>
 </template>
 
@@ -11,7 +10,6 @@ import { FoodType } from '~/pages/index.vue'
 
 export interface StateType{
   food: FoodType | null
-  isLoading: boolean
 }
 
 export default defineComponent({
@@ -19,7 +17,6 @@ export default defineComponent({
     const route = useRoute()
     const state = reactive<StateType>({
       food: null,
-      isLoading: true
     })
     const {$supabase} = useContext()
     useFetch(async ()=>{
@@ -27,7 +24,6 @@ export default defineComponent({
       if(data[0]){
         state.food = data[0]
       }
-      state.isLoading = false
     })
     return { state }
   },
