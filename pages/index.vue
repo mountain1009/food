@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for='(food, i) in state.foods' :key='i'>
-      <nuxt-link :to='`/foods/${food.id}`' class='text-blue-800 hover:underline'>{{food.name}}</nuxt-link>
+      <nuxt-link :to='`/foods/${food.id}`' class='text-blue-800'>{{food.name}}</nuxt-link>
     </div>
   </div>
 </template>

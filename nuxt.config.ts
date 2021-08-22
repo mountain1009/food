@@ -10,7 +10,7 @@ const config: NuxtConfig = {
   head: {
     title: 'ramen',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ja',
     },
     meta: [
       { charset: 'utf-8' },
@@ -36,9 +36,8 @@ const config: NuxtConfig = {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    'nuxt-vite',
+    // 'nuxt-vite',
     '@nuxtjs/composition-api/module',
-    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -51,6 +50,9 @@ const config: NuxtConfig = {
       },
     ],
   ],
+  // vite: {
+  //   ssr: true,
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
