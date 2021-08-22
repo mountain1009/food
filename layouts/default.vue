@@ -1,9 +1,11 @@
 <template>
-  <main class='min-h-screen relative'>
-    <Header/>
-    <Nuxt class='max-w-7xl  mx-auto'/>
-    <SignInModal v-if='modalFlag' />
-  </main>
+  <content-only>
+    <main class='min-h-screen relative'>
+      <Header/>
+      <Nuxt class='max-w-7xl  mx-auto'/>
+      <SignInModal v-if='modalFlag' />
+    </main>
+  </content-only>
 </template>
 
 <script lang="ts">
