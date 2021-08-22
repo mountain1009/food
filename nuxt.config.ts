@@ -5,6 +5,7 @@ const { SUPABASE_URL, SUPABASE_KEY } = process.env
 const config: NuxtConfig = {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  ssr: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {

@@ -1,11 +1,9 @@
 <template>
-  <content-only>
-    <main class='min-h-screen relative'>
-      <Header/>
-      <Nuxt class='max-w-7xl  mx-auto'/>
-      <SignInModal v-if='modalFlag' />
-    </main>
-  </content-only>
+  <main class='min-h-screen relative'>
+    <Header/>
+    <Nuxt class='max-w-7xl  mx-auto'/>
+    <SignInModal v-if='modalFlag' />
+  </main>
 </template>
 
 <script lang="ts">
@@ -21,7 +19,7 @@ export default defineComponent({
   setup() {
     const modalFlag = computed<boolean>(()=>{
       return authModal.data
-    })
+})
 
     return {modalFlag}
   },
