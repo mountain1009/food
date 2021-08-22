@@ -1,10 +1,8 @@
 <template>
-  <div>
+  <main class='min-h-screen'>
     <Header/>
-    <main class='min-h-screen'>
-      <Nuxt class='max-w-7xl  mx-auto'/>
-    </main>
-  </div>
+    <Nuxt class='max-w-7xl  mx-auto'/>
+  </main>
 </template>
 
 <script lang="ts">
