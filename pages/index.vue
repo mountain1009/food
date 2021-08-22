@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import {  defineComponent,useContext ,reactive, useFetch } from '@nuxtjs/composition-api'
+import {  defineComponent,useContext ,reactive, onMounted } from '@nuxtjs/composition-api'
 
 export interface FoodType{
   name: string
@@ -21,7 +21,7 @@ export default defineComponent({
       foods: []
     })
     const {$supabase} = useContext()
-    useFetch(async ()=>{
+    onMounted(async ()=>{
       const { data } = await $supabase.from("foods").select("*")
       console.log(data)
       state.foods = data

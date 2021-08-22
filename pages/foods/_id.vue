@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import {  defineComponent,useContext ,reactive, useFetch, useRoute } from '@nuxtjs/composition-api'
+import {  defineComponent,useContext ,reactive, onMounted, useRoute } from '@nuxtjs/composition-api'
 import { FoodType } from '~/pages/index.vue'
 
 export interface StateType{
@@ -19,7 +19,7 @@ export default defineComponent({
       food: null,
     })
     const {$supabase} = useContext()
-    useFetch(async ()=>{
+    onMounted(async ()=>{
       const { data } = await $supabase.from("foods").select("*").match({id: route.value.params.id})
       if(data[0]){
         state.food = data[0]

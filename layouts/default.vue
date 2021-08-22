@@ -1,10 +1,10 @@
 <template>
-  <no-ssr>
+  <client-only>
     <main class='min-h-screen'>
       <Header/>
       <Nuxt class='max-w-7xl  mx-auto'/>
     </main>
-  </no-ssr>
+  </client-only>
 </template>
 
 <script lang="ts">
